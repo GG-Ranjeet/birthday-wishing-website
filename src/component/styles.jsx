@@ -21,16 +21,7 @@ const styles = {
     margin: '0 auto',                // center the card horizontally
   },
   // Keep your existing card style (without height) for other sections
-  card: {
-    background: 'rgba(255, 255, 255, 0.8)',
-    backdropFilter: 'blur(8px)',
-    borderRadius: '20px',
-    padding: '40px',
-    maxWidth: '600px',
-    textAlign: 'center',
-    boxShadow: '0 10px 30px rgba(0,0,0,0.2)',
-    pointerEvents: 'auto',
-  },
+
     card: {
         background: 'rgba(255, 255, 255, 0.8)',
         backdropFilter: 'blur(8px)',
