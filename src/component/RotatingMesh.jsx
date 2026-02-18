@@ -23,6 +23,7 @@ export default function RotatingMesh(props) {
 
     const cakeInitialPos = new THREE.Vector3(0, -1, 0);
     const cakeLerpPos = new THREE.Vector3(-0.2, 0, 0);
+    const cakeBottonPos = new THREE.Vector3(0, 0, 0);
 
     // forward/backword(white), rotates, left/right(pink)
     const pi = 3.141 / 10;
@@ -63,13 +64,21 @@ export default function RotatingMesh(props) {
 
         if (page2 > 0) {
             camTarget.lerpVectors(frontView, topView, page2);
-            posTarget.lerpVectors(cakeInitialPos, cakeLerpPos, page2);
+            posTarget.lerpVectors(
+                cakeInitialPos, 
+                cakeLerpPos, 
+                page2);
             qTarget.slerpQuaternions(startQuaternion, topViewQuaternion, page2);
         }
-
+        
         if (page3>0){
+            // posTarget.lerpVectors(
+            //     cakeLerpPos, 
+            //     cakeInitialPos,
+            //     page2);
             candleTarget.lerpVectors(candleInitPostion, candleFinalPosition, page3);
         }
+
         // spinRef.current.quaternion.slerp(qTarget, 0.1);
         // if (scroll.offset < 0.1 || scroll.offset > 0.9) {
             //     spinRef.current.rotation.y +=delta*100;
@@ -93,24 +102,17 @@ export default function RotatingMesh(props) {
 
                     <CakeModel {...props}></CakeModel>
                     <CandleModel
-                        ref={candleRef}                 // we'll need a ref to animate it separately
+                        ref={candleRef}
                         scale={0.15}
-                        position={[0, 0.93, 0]}          // adjust Y so it sits on the cake
+                        position={[0, 0.93, 0]}
                     />
 
-                    {/* <mesh position={[0, 0.5, 0]}>
-                    <boxGeometry args={[1, 0.05, 0.05]} />
-                </mesh>
-                <mesh position={[0, 0.5, 0]}>
-                    <boxGeometry args={[0.05, 0.05, 1]} />
-                    <meshStandardMaterial color="hotpink"></meshStandardMaterial>
-                </mesh> */}
                 </group>
             </group>
 
             <group ref={originRef}>
                 <mesh position={[0, 0, 0]}>
-                    <boxGeometry args={[0.01, 0.01, 0.01]} /> {/* Box size: 1x1x1 */}
+                    <boxGeometry args={[0.00001, 0.00001, 0.00001]} /> {/* Box size: 1x1x1 */}
                     <meshStandardMaterial color="hotpink" />
                 </mesh>
             </group>
