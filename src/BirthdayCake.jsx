@@ -72,14 +72,14 @@ export default function BirthdayCake() {
 
               <section className="section" style={styles.section}>
                 <div style={styles.card}>
-                  <h1 style={styles.title}>🤐</h1>
-                  <p style={styles.subtitle}>I forgot how to talk now haha, still remembering those good old days</p>
+                  <h1 style={styles.title}>🌻🌻</h1>
+                  <p style={styles.subtitle}>Hope your day is as bright and wonderful as you are. Let's celebrate you today!</p>
                 </div>
               </section>
 
               <section className="section last-section" style={styles.section}>
                 <div style={styles.card}>
-                  <h1 style={styles.title}>✨ Happy Birthday </h1>
+                  <h1 style={styles.title}>✨ Happy Birthday ✨</h1>
                   <p style={styles.subtitle}>Lets Celebrate and enjoy your moment </p>
                   <button
                     style={styles.button}
