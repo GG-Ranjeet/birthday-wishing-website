@@ -255,4 +255,4 @@ Future enhancements could include:
 
 # 📄 License
 
-This project uses [LICENCE](LICENCE) is open-source and available for experimentation, learning, and portfolio use.
+This project uses [LICENSE](LICENSE) is open-source and available for experimentation, learning, and portfolio use.
